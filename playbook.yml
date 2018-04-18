@@ -15,6 +15,7 @@
     - { role: svn, tags: ['svn'] }
     - { role: java, tags: ['java'] }
     - { role: eclipse, tags: ['eclipse'] }
+    - { role: python, tags: ['python'] }
     - { role: custom, tags: ['custom']}
 # Archived roles
 #    - { role: ant, tags: ['ant'] }
@@ -23,5 +24,5 @@
 #    - { role: terraform, tags: ['terraform']}
 #    - { role: prometheus, tags: ['prometheus'] }
 #    - { role: kubernetes, tags: ['kubernetes'] }
-#    - { role: awscli, tags: ['awscli'] }
+    - { role: awscli, tags: ['awscli'] }
 

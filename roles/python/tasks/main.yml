@@ -1,0 +1,22 @@
+- name: Install Python 3
+  yum:
+    name: python36u
+
+- alternatives:
+    link: /bin/python3
+    name: python3
+    path: /bin/python3.6
+
+- name: Install pip3
+  command: python3 -m ensurepip
+
+- alternatives:
+    link: /bin/pip3
+    name: pip3
+    path: /bin/pip3.6
+
+- name: Upgrade pip
+  command: pip install -U pip
+
+- name: Upgrade pip3
+  command: pip3 install -U pip
