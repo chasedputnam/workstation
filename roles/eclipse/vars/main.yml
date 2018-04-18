@@ -3,12 +3,12 @@
 # - Click on the Build Name of the Latest Releast
 # - In "Related Links", click  "View the Git repositories used for the current build"
 # - Build ID should be in the first lines
-eclipse_buildId: 4.7.2.M20171130-0510
+eclipse_buildId: 4.7.3a.M20180330-0640 
 
 # Tarball download info can be found at 
 # https://www.eclipse.org/downloads/eclipse-packages/?osType=linux&release=undefined
 # We want "Eclipse ID for Java Developers 64 bit"
-eclipse_tarball: eclipse-jee-oxygen-2-linux-gtk-x86_64.tar.gz
-eclipse_download_querystring: file=/technology/epp/downloads/release/oxygen/2/{{eclipse_tarball}}&r=1
+eclipse_tarball: eclipse-jee-oxygen-3a-linux-gtk-x86_64.tar.gz
+eclipse_download_querystring: file=/technology/epp/downloads/release/oxygen/3a/{{eclipse_tarball}}&r=1
 eclipse_download_path: downloads/download.php?{{eclipse_download_querystring}}
 eclipse_download_url: https://www.eclipse.org/{{eclipse_download_path}}
