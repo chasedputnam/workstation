@@ -21,7 +21,7 @@
 #    - { role: ant, tags: ['ant'] }
 #    - { role: rpmbuild, tags: ['rpmbuild']}
 #    - { role: keepassx, tags: ['keepassx']}
-#    - { role: terraform, tags: ['terraform']}
+    - { role: terraform, tags: ['terraform']}
 #    - { role: prometheus, tags: ['prometheus'] }
 #    - { role: kubernetes, tags: ['kubernetes'] }
     - { role: awscli, tags: ['awscli'] }
