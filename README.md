@@ -1,4 +1,4 @@
-Ansible playbook and Vagrantfile for recreating workstation.  Testing with VirtualBox 5.2 and Vagrant 2.0.1
+Ansible playbook and Vagrantfile for recreating workstation.  Tested with VirtualBox 5.2.6 and Vagrant 2.0.2
 
 Includes:
 - Xfce desktop
