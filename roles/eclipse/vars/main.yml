@@ -3,7 +3,7 @@
 # - Click on the Build Name of the Latest Releast
 # - In "Related Links", click  "View the Git repositories used for the current build"
 # - Build ID should be in the first lines
-eclipse_buildId: 4.7.3a.M20180330-0640 
+eclipse_buildId: 4.7.3.M20180330-0640 
 
 # Tarball download info can be found at 
 # https://www.eclipse.org/downloads/eclipse-packages/?osType=linux&release=undefined
