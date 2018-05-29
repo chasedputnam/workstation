@@ -11,8 +11,14 @@
   yum:
     name: sublime-text
 
-
 - name: Install Package Control
-  get_url: 
+  file:
+    path: /home/{{ local_username }}/.config/sublime-text-3/Installed Packages/
+    state: directory
+    owner: "{{ local_username }}"
+    group: "{{ local_username }}" 
+    mode: 0700
+
+- get_url: 
     url: https://packagecontrol.io/Package Control.sublime-package
     dest: /home/{{ local_username }}/.config/sublime-text-3/Installed Packages/
