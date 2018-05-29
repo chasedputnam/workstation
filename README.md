@@ -1,4 +1,4 @@
-Ansible playbook and Vagrantfile for recreating workstation.  Tested with VirtualBox 5.2.8 and Vagrant 2.0.3
+Ansible playbook and Vagrantfile for recreating workstation.  Tested with VirtualBox 5.2.12 and Vagrant 2.1.1
 
 Includes:
 - Xfce desktop
@@ -11,6 +11,7 @@ Includes:
 - Terraform
 - Python 3
 - AWS CLI
+- Sublime Text 3
 
 # Prerequisites
 - Install [VirtualBox](https://www.virtualbox.org)
