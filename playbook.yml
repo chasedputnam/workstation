@@ -16,7 +16,6 @@
     - { role: java, tags: ['java'] }
     - { role: eclipse, tags: ['eclipse'] }
     - { role: python, tags: ['python'] }
-    - { role: custom, tags: ['custom']}
 #    - { role: ant, tags: ['ant'] }
 #    - { role: rpmbuild, tags: ['rpmbuild']}
 #    - { role: keepassx, tags: ['keepassx']}
@@ -25,4 +24,5 @@
 #    - { role: kubernetes, tags: ['kubernetes'] }
     - { role: awscli, tags: ['awscli'] }
     - { role: sublime-text, tags: ['sublime-text']}
+    - { role: custom, tags: ['custom']}
 
