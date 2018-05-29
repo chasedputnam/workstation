@@ -3,6 +3,10 @@
     url: "{{ terraform_download_url }}"
     dest: "/tmp/{{ terraform_zip }}"
 
+- name: Install unzip
+  yum:
+    name: unzip
+
 - name: Extract Terraform
   unarchive:
     remote_src: yes
