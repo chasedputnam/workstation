@@ -15,8 +15,5 @@
     name: pip3
     path: /bin/pip3.6
 
-- name: Upgrade pip
-  command: pip install -U pip
-
 - name: Upgrade pip3
   command: pip3 install -U pip
