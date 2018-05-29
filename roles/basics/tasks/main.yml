@@ -2,17 +2,26 @@
 #   command: setenforce 0
 
 - name: Install firewalld
-  yum: name=firewalld state=present
+  yum: 
+    name: firewalld
 
-- service: name=firewalld state=started enabled=true
+- service: 
+    name: firewalld 
+    state: started 
+    enabled: true
 
 - name: Install EPEL Repo
-  yum: name=epel-release
+  yum: 
+    name: epel-release
 
 - name: Create local user acccount
-  group: name={{ local_username }}
+  group: 
+    name: "{{ local_username }}"
   
-- user: name={{ local_username}} group={{ local_username }} groups=wheel
+- user: 
+    name: "{{ local_username}}"
+    group: "{{ local_username }}"
+    groups: wheel
 
 - file: 
     path: /home/{{ local_username }}/.ssh 
@@ -27,13 +36,23 @@
 
 - command: cp /home/vagrant/.ssh/authorized_keys /home/{{ local_username }}/.ssh
 
-- file: path=/home/{{ local_username }}/.ssh/authorized_keys owner={{ local_username }} group={{ local_username }} mode=0600 
+- file: 
+    path: /home/{{ local_username }}/.ssh/authorized_keys
+    owner: "{{ local_username }}"
+    group: "{{ local_username }}"
+    mode: 0600 
 
 - name: Sudoers
-  template: src=local.sudoers dest=/etc/sudoers.d/local
+  template: 
+    src: local.sudoers
+    dest: /etc/sudoers.d/local
 
 # Install only last 2 kernel packages
 - lineinfile:
     line: "installonly_limit=2"
     path: /etc/yum.conf
+
+- name: Install unzip
+  yum:
+    name: unzip
 
