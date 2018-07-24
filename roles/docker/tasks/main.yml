@@ -23,3 +23,14 @@
 
 - name: Add user to group
   user: name={{ local_username}} append=yes groups=docker
+
+- name: Download Docker Compose
+  get_url:
+    url: "{{ docker_compose_url }}"
+    dest: /usr/local/bin/docker-compose
+
+- file:
+    path: /usr/local/bin/docker-compose
+    mode: 0755
+    owner: root
+    group: root
