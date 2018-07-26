@@ -10,8 +10,10 @@
 - name: Download Java RPM
   get_url:
     url:     "{{ java_url }}"
-    headers: 'Cookie:oraclelicense=accept-securebackup-cookie'
+    headers: 
+      Cookie: oraclelicense=accept-securebackup-cookie
     dest:    /tmp/{{ java_rpm }}
+    checksum: "{{ java_rpm_checksum }}"
   when: java_version_installed.stdout != java_version
 
 - name: Install java
