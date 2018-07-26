@@ -1,14 +1,15 @@
 # To find the buildId:
 # - go to http://download.eclipse.org/eclipse/downloads/
-# - Click on the Build Name of the Latest Releast
+# - Click on the Build Name of the Latest Release
 # - In "Related Links", click  "View the Git repositories used for the current build"
 # - Build ID should be in the first lines
-eclipse_buildId: 4.7.3.M20180330-0640 
+eclipse_buildId: 4.8.0.I20180611-0500 
 
 # Tarball download info can be found at 
 # https://www.eclipse.org/downloads/eclipse-packages/?osType=linux&release=undefined
-# We want "Eclipse ID for Java Developers 64 bit"
-eclipse_tarball: eclipse-jee-oxygen-3a-linux-gtk-x86_64.tar.gz
-eclipse_download_querystring: file=/technology/epp/downloads/release/oxygen/3a/{{eclipse_tarball}}&r=1
+# We want "Eclipse IDE for Java Developers 64 bit"
+eclipse_tarball: eclipse-dsl-photon-R-linux-gtk-x86_64.tar.gz
+eclipse_download_querystring: file=/technology/epp/downloads/release/photon/R/{{eclipse_tarball}}&r=1
 eclipse_download_path: downloads/download.php?{{eclipse_download_querystring}}
 eclipse_download_url: https://www.eclipse.org/{{eclipse_download_path}}
+eclipse_tarball_checksum: sha512:43bd7e39e8fafadd871d15cbe0139c60f6783c10c556d9fb98d52f306a148d7465416df1ab3ed6f6f5090839799dd6bc1b2b399864aa50f4bd2b30aaa4824195
