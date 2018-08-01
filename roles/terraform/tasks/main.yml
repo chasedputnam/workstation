@@ -1,7 +1,13 @@
+- name: Get Terraform version
+  shell: /usr/local/bin/terraform version | awk '{print $2}' | sed 's/v//' | tr -d '\n'
+  ignore_errors: yes
+  register: terraform_version_installed
+
 - name: Download Terraform
   get_url:
     url: "{{ terraform_download_url }}"
     dest: "/tmp/{{ terraform_zip }}"
+  when: terraform_version_installed.stdout != terraform_version
 
 - name: Install unzip
   yum:
@@ -12,6 +18,7 @@
     remote_src: yes
     src: /tmp/{{ terraform_zip }}
     dest: /usr/local/bin/
+  when: terraform_version_installed.stdout != terraform_version
 
 - file: 
     path: /usr/local/bin/terraform
