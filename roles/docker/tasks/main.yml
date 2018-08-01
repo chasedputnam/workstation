@@ -24,10 +24,16 @@
 - name: Add user to group
   user: name={{ local_username}} append=yes groups=docker
 
+- name: Get Docker Compose version
+  shell: /usr/local/bin/docker-compose version --short | tr -d '\n'
+  ignore_errors: yes
+  register: docker_compose_version_installed
+
 - name: Download Docker Compose
   get_url:
     url: "{{ docker_compose_url }}"
     dest: /usr/local/bin/docker-compose
+  when: docker_compose_version_installed.stdout != docker_compose_version
 
 - file:
     path: /usr/local/bin/docker-compose
