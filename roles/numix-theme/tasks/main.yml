@@ -1,0 +1,7 @@
+- name: Install Numix Theme
+  yum:
+    name: numix-gtk-theme
+
+- name: Install Numix Circle Icons
+  yum:
+    name: numix-icon-theme-circle

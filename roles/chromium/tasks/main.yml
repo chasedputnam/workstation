@@ -1,0 +1,3 @@
+- name: Install Google Chromium
+  yum:
+    name: chromium

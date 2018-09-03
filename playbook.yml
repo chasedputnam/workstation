@@ -24,5 +24,9 @@
 #    - { role: kubernetes, tags: ['kubernetes'] }
     - { role: awscli, tags: ['awscli'] }
     - { role: sublime-text, tags: ['sublime-text']}
+    - { role: chromium, tags: ['chromium']}
+    - { role: firefox, tags: ['firefox']}
+    - { role: file-roller, tags: ['file-roller']}
+    - { role: numix-theme, tags: ['numix-theme']}
     - { role: custom, tags: ['custom']}
 

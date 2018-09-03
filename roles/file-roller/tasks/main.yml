@@ -1,0 +1,3 @@
+- name: Install File Roller Archive Manager
+  yum:
+    name: file-roller
